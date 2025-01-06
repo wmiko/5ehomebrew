@@ -1,0 +1,629 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "Wyrmholt",
+				"abbreviation": "WH",
+				"full": "Wyrmholt",
+				"url": "",
+				"authors": [],
+				"convertedBy": [],
+				"version": "1.0.0"
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Wyrmroot Tree Automaton",
+			"source": "Wyrmholt",
+			"page": 0,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "construct",
+				"tags": [
+					"plant-infused"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 8"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 5,
+			"wis": 10,
+			"cha": 6,
+			"save": {
+				"con": "+4"
+			},
+			"skill": {
+				"perception": "+2",
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands Draconic and Xel Machine Code but can't speak"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Plant-Mechanical Integration:",
+					"entries": [
+						"The automaton ignores difficult terrain caused by plant growth."
+					]
+				},
+				{
+					"name": "Shadow Pulse (1/Day):",
+					"entries": [
+						"As a bonus action, the automaton emits a pulse of dark energy. Each creature within 10 feet must make a {@dc 11} Wisdom saving throw or become {@condition frightened} for 1 minute. A {@condition frightened} creature can repeat the saving throw at the end of its turns."
+					]
+				},
+				{
+					"name": "Ticking Countdown:",
+					"entries": [
+						"At the start of each of its turns, roll a {@dice d6}. On a 6, the automaton's core destabilizes. Each creature within 10 feet must succeed on a {@dc 11} Dexterity saving throw or take 5 ({@damage 2d4}) lightning damage."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Root Slash:",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target: {@h}6 ({@damage 1d8 + 2}) slashing damage."
+					]
+				},
+				{
+					"name": "Entangling Lash (Recharge 5-6):",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 20 ft., one target: {@h}7 ({@damage 1d10 + 2}) piercing damage, and the target is {@condition grappled} (escape {@dc 12})."
+					]
+				},
+				{
+					"name": "Multiattack:",
+					"entries": [
+						"The automaton makes two Root Slash attacks."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"grappled"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Wyrmroot Sapling",
+			"source": "Wyrmholt",
+			"page": 0,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "plant",
+				"tags": [
+					"construct-infused"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d6 + 2"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 10
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 12,
+			"int": 3,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands Draconic and Xel Machine Code but can't speak"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Trait:",
+					"entries": [
+						"Constructed {@skill Nature|XPHB} The Wyrmroot Sapling doesn't need to eat, drink, or breathe."
+					]
+				},
+				{
+					"name": "Rooted Resilience:",
+					"entries": [
+						"The sapling can root itself into the ground as a bonus action, gaining +2 AC but losing movement. It can uproot itself as a bonus action."
+					]
+				},
+				{
+					"name": "Corrupting Sap:",
+					"entries": [
+						"When the Wyrmroot Sapling hits a creature with its Root Lash, the target must succeed on a {@dc 11} Constitution saving throw or take 2 ({@damage 1d4}) poison damage at the start of its next turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Root Lash Melee Weapon Attack:",
+					"entries": [
+						"{@hit 3} to hit, reach 5 ft., one target: {@h}5 ({@damage 1d6 + 1}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Entangle (Recharge 6):",
+					"entries": [
+						"Vines erupt from the ground in a 10-foot radius centered on the sapling. Each creature in the area must succeed on a {@dc 11} Strength saving throw or be {@condition restrained} for 1 minute. A {@condition restrained} creature can repeat the saving throw at the end of each of its turns."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"I"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			]
+		},
+		{
+			"name": "Finnick, Desperate Alchemist",
+			"isNamedCreature": true,
+			"source": "Wyrmholt",
+			"page": 0,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|XPHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 14,
+			"int": 16,
+			"wis": 12,
+			"cha": 10,
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"poison"
+					],
+					"note": "(from chemical exposure)",
+					"cond": true
+				}
+			],
+			"vulnerable": [
+				"radiant (while near xel relics)"
+			],
+			"languages": [
+				"Common",
+				"Alchemical Notation"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Alchemical Expertise Finnick adds +2 to Arcana, Medicine, and Alchemist's Supplies checks related to potions, crafting, and identifying magical substances",
+					"entries": []
+				},
+				{
+					"name": "Potion Specialist Finnick can throw two potions per turn if both targets are within 10 feet of each other",
+					"entries": []
+				},
+				{
+					"name": "Unstable Alchemy:",
+					"entries": [
+						"When reduced to 0 HP, Finnick's unstable chemicals explode, dealing {@damage 2d6} acid damage to all creatures within 10 feet ({@dc 13} DEX save for half damage)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack:",
+					"entries": [
+						"Finnick makes two potion throws or one potion throw and one melee attack."
+					]
+				},
+				{
+					"name": "Potion Throw:",
+					"entries": [
+						"{@atk rw} {@hit 5} to hit, range 30 ft., one target. {@h}{@damage 2d6} acid or fire damage (choose when thrown)."
+					]
+				},
+				{
+					"name": "Dagger:",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}{@damage 1d4 + 2} piercing damage."
+					]
+				},
+				{
+					"name": "Alchemical Blast (Recharge 5-6):",
+					"entries": [
+						"Area of Effect: A 10-foot radius explosion centered within 30 feet. {@dc 13} DEX Save or take {@damage 4d6} fire damage (half damage on success)."
+					]
+				}
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"MLW",
+				"AOE"
+			],
+			"legendaryHeader": [
+				"Lair Actions (Finnick's Lab) Initiative Count 20 (Loses Ties) Chemical Surge: An unstable alchemical flask explodes near the combat area. All creatures within 10 feet of the blast must make a {@dc 13} DEX save or take {@damage 2d6} fire damage.",
+				"Gravity Shift: Xel devices malfunction, altering local gravity. All creatures must make a {@dc 12} STR save or be knocked {@condition prone}.",
+				"Toxic Mists: The area fills with noxious fumes. All creatures in a 20-foot radius must make a {@dc 12} CON save or be {@condition poisoned} for 1 minute. Creatures can repeat the saving throw at the end of each of their turns.",
+				"Alchemical Restoration: Alchemical vats release healing vapor, restoring {@dice 2d8} HP to Finnick unless destroyed before this lair action triggers again.",
+				"Description: Finnick is a brilliant but unstable alchemist obsessed with defying death through alchemical necromancy. His ragged appearance, trembling hands, and darting eyes reveal a mind stretched thin by grief and desperation. His forest laboratory pulses with unstable energy, where science and forbidden magic meet."
+			]
+		},
+		{
+			"name": "Homunculus (The Last Xel Prototype)",
+			"source": "Wyrmholt",
+			"page": 0,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"construct-infused"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "7d8 + 21"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"lightning",
+				"necrotic"
+			],
+			"vulnerable": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common and Xel Machine Code",
+				"but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Technomagical Resilience The homunculus has advantage on saving throws against spells and magical effects",
+					"entries": []
+				},
+				{
+					"name": "Reactive Core When the homunculus is reduced to 0 HP, its core becomes unstable and explodes",
+					"entries": [
+						"Creatures within 15 feet must make a {@dc 14} DEX save, taking {@damage 4d6} necrotic damage on a failure, or half as much on a success."
+					]
+				},
+				{
+					"name": "Partial Activation The homunculus is not fully complete, leaving some of its systems unstable",
+					"entries": [
+						"At the start of each of its turns, roll a {@dice d6}:",
+						"1-2. Energy Surge: The homunculus emits a pulse of energy. The homunculus looses its Action for this round",
+						"3-4. Self-Repair: The homunculus regains {@dice 1d8} hit points.",
+						"5-6. Core Instability: The homunculus takes {@damage 1d6} damage as its systems overload."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack:",
+					"entries": [
+						"The homunculus makes two melee attacks: one with its claws and one with its tail."
+					]
+				},
+				{
+					"name": "Claw Strike Melee Weapon Attack:",
+					"entries": [
+						"{@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Connector Lash Melee Weapon Attack:",
+					"entries": [
+						"{@hit 5} to hit, reach 10 ft., one target. {@h}8 ({@damage 1d10 + 3}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 13} STR save or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Disruptive Pulse (Recharge 5-6) The homunculus releases a burst of energy in a 15-foot radius",
+					"entries": [
+						"All creatures within range must succeed on a {@dc 14} CON save or take {@damage 3d8} necrotic damage and lose {@status Concentration|XPHB} on spells.",
+						"Description The homunculus, a blend of human biology and Xel technology, was designed as the perfect vessel for a Xel consciousness. While incomplete, it possesses both the strength of a living construct and the remnants of the Xel's ancient power. Its movements are mechanical yet unnervingly human, and its glowing core pulses in sync with the surrounding relics.",
+						"Though modeled after Finnick's sister, its soulless demeanor and fragmented functionality reveal it as an unholy imitation of life. The homunculus serves as a testament to the Xel's hubris, a prototype of their ambition to transcend death and reclaim dominance."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Sparkle, the Reconstructed First Kobold",
+			"source": "Wyrmholt",
+			"page": 0,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kobold",
+					"xel-touched"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d6 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"lightning",
+				"necrotic"
+			],
+			"vulnerable": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Xel Machine Code (understands but cannot fully translate)"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Living Archive Sparkle is imbued with fragments of Xel knowledge",
+					"entries": [
+						"Once per long rest, they can provide advantage to a party member's Intelligence ({@skill Arcana|XPHB}) or Intelligence ({@skill Investigation|XPHB}) check related to Xel relics or constructs."
+					]
+				},
+				{
+					"name": "Innocent Aura Sparkle's endearing demeanor makes them difficult to target",
+					"entries": [
+						"Creatures must succeed on a {@dc 13} WIS save to willingly attack Sparkle unless they are immune to charm effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite Melee Weapon Attack:",
+					"entries": [
+						"{@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Interface Spark Sparkle interacts with a nearby Xel relic, causing a random effect (roll a d6):",
+					"entries": [
+						"1: Helpful Activation: A Xel device activates in the party's favor.",
+						"2: Malfunction: The relic emits an energy pulse, dealing {@damage 2d6} lightning damage to all creatures within 10 feet.",
+						"3: Repair Field: A wave of energy heals all creatures in a 15-foot radius for {@dice 1d6} hit points.",
+						"4: Unexpected Doorway: A hidden passage or mechanism is revealed.",
+						"5: Data Fragment: Sparkle unknowingly retrieves important Xel lore from the relic.",
+						"6: Core Surge: The relic overloads, causing {@damage 4d6} necrotic damage to Sparkle and forcing a {@dc 15} DEX save for creatures within 10 feet to avoid the same damage."
+					]
+				},
+				{
+					"name": "Guiding Insight:",
+					"entries": [
+						"Once per short rest, Sparkle can provide guidance to the party. Effect: One ally within 30 feet gains a{@dice  + 1d4} bonus to their next attack roll, saving throw, or ability check.",
+						"Description Sparkle is the reconstructed First Kobold, an early Xel prototype for creating dragons. Though small and unassuming, they possess a latent connection to Xel technology, giving them insight into relics and constructs. Their curious and playful nature often leads to unintended chaos, but their loyalty to the party and genuine desire to help make them a lovable companion.",
+						"Sparkle's shimmering prismatic scales and bumbling charm add both comic relief and moments of surprising brilliance, as their accidental insights into the Xel's workings often guide the party through difficult situations."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE"
+			]
+		}
+	]
+}
